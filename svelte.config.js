@@ -15,7 +15,7 @@ const config = {
 			assets : "docs",
 		}),
 		paths: {
-			base: dev ? "" : "/KaiErikNiermann.github.io",
+			base: dev ? "" : "/docs",
 		},
 	}
 };
