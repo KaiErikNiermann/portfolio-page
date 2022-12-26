@@ -1,5 +1,7 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+
+const dev = "production" === "development";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +10,14 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			pages : "docs",
+			assets : "docs",
+		}),
+		paths: {
+			base: dev ? "" : "/KaiErikNiermann.github.io",
+		},
+		target: "#svelte",
 	}
 };
 
