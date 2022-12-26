@@ -6,7 +6,7 @@
 <div id="main_content"> 
     <aside id="sidebar">
         <h2>sidebar</h2>
-        <p>sidebar is a component that is used to render a sidebar.</p>
+        <p>sidebar is a component that is used to render a sidebar..</p>
     </aside>
 
     <section id="main_section">
