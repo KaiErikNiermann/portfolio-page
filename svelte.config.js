@@ -1,21 +1,24 @@
-import adapter from "@sveltejs/adapter-static"; 
-// was "@sveltejs/adapter-auto"
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 const dev = "production" === "development";
 
-/** @type {import(""@sveltejs/kit").Config} */
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-    kit: {
-        adapter: adapter({
-			base: "docs",
-            pages: "docs",
-            assets: "docs"
-        }),
-        paths: {
-            // change below to your repo name
-            base: dev ? "" : "/KaiErikNiermann.github.io",
-        },
-    }
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
+
+	kit: {
+		adapter: adapter({
+			pages : "docs",
+			assets : "docs",
+		}),
+		paths: {
+			base: dev ? "" : "/KaiErikNiermann.github.io",
+			assets: dev ? "" : "/docs"
+		},
+	}
 };
 
 export default config;
