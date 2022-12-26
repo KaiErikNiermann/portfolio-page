@@ -7,6 +7,7 @@ const dev = "production" === "development";
 const config = {
     kit: {
         adapter: adapter({
+			base: "docs",
             pages: "docs",
             assets: "docs"
         }),
