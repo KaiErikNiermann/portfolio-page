@@ -16,7 +16,6 @@ const config = {
 		}),
 		paths: {
 			base: dev ? "" : "/KaiErikNiermann.github.io",
-			assets: dev ? "" : "/docs"
 		},
 	}
 };
