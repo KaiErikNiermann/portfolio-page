@@ -15,7 +15,7 @@ const config = {
 			assets : "docs",
 		}),
 		paths: {
-			base: dev ? "" : "/docs",
+			base: dev ? "" : "/portfolio-page",
 		},
 	}
 };
