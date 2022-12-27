@@ -8,7 +8,8 @@
         <h2>sidebar</h2>
         <p>sidebar is a component that is used to render a sidebar..</p>
     </aside>
-
+    
+    
     <section id="main_section">
         <h2>main section</h2>
         <p>main section is a component that is used to render a main section.</p>
@@ -22,14 +23,14 @@
     }
 
     aside#sidebar {
-        width: 25%;
+        width: 20%;
         height: 100vh;
     }
 
     section#main_section {
         padding-left: 10px;
         border-left: 2px solid rgb(218, 218, 218);
-        width: 75%;
+        width: 80%;
         height: 100vh;
     }
 
