@@ -1,10 +1,30 @@
+<script>
+    import ExperienceSection from "./ExperienceSection.svelte";
+    import InfoSection from "./InfoSection.svelte";
+    import ProjectsSection from "./ProjectsSection.svelte";
+</script>
+
 <article>
-    <h1>Page</h1>
-    <p>This is a page.</p>
+    <div class="main-container">
+        <InfoSection />
+        <ProjectsSection />
+        <ExperienceSection />
+    </div>
 </article>
 
 <style>
     article {
         flex: 1;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: horizontal;
+    }
+
+    @media (max-width: 1100px) {
+        .main-container {
+            flex-direction: column;
+        }
     }
 </style>
