@@ -1,0 +1,25 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+* {
+    font-family: "Inter", sans-serif;
+    background-color: $color-background;
+    color: $default-font-color;
+    // remove all underlines
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    // background: -webkit-linear-gradient(right, lightblue, blue);
+    background: lightskyblue;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
