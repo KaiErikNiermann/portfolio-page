@@ -1,2 +1,10 @@
-<h1>hello world</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<article>
+    <h1>Page</h1>
+    <p>This is a page.</p>
+</article>
+
+<style>
+    article {
+        flex: 1;
+    }
+</style>
