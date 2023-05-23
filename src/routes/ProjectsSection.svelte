@@ -1,12 +1,14 @@
 <script lang="ts" type="module">
+    interface Project {
+        name: string;
+        description: string;
+        startDate: string;
+        endDate: string;
+        link: string;
+    }
     import ProjectCard from "./ProjectCard.svelte";
-
-    let projects: Array<string> = [
-        "Project 1",
-        "Project 2",
-        "Project 3"
-    ]
-
+    import projects from "./Projects.json";
+    const my_projects: Project[] = projects.projects;
 </script>
 
 <div id="project-section-container">
@@ -14,8 +16,8 @@
         <h1>Projects</h1>
     </div>
     <div class="project-card-section">
-        {#each projects as project}
-            <ProjectCard bind:project={project} />
+        {#each my_projects as project}
+            <ProjectCard bind:project />
         {/each}
     </div>
 </div>

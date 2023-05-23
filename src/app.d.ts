@@ -5,7 +5,16 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {}
+		interface Env {
+			POSTGRES_URL: string;
+		}
 		// interface Platform {}
+		interface Project {
+			name: string;
+			description: string;
+			startDate: string;
+			endDate: string;
+		}
 	}
 }
 
