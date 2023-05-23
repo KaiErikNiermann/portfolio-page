@@ -1,18 +1,27 @@
+<script lang="ts" type="module">
+    function cpyDiscHandle() {
+        navigator.clipboard.writeText("@Applesauce#5880");
+        alert("Copied username to clipboard!");
+    }
+</script>
+
 <div class="info-section-container">
     <div class="info-title-section">
         <h1>Kai Erik Niermann</h1>
         <ul>
             <li>
-                <h3>github</h3>
+                <a href="https://github.com/KaiErikNiermann"><h3>github</h3></a>
             </li>
             <li>
-                <h3>linkedin</h3>
+                <a href="https://www.linkedin.com/in/kai-niermann-0794ab91/"
+                    ><h3>linkedin</h3></a
+                >
             </li>
             <li>
                 <h3>twitter</h3>
             </li>
             <li>
-                <h3>discord</h3>
+                <h3 id="discord-handle" on:click={() => cpyDiscHandle()} on:keydown={() => cpyDiscHandle()}>discord</h3>
             </li>
         </ul>
     </div>
@@ -20,11 +29,9 @@
 
 <style lang="scss">
     .info-section-container {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         min-width: 350px;
-        border: 1px solid white;
+        border-right: 2px solid #171717;
     }
 
     .info-section-container {
@@ -67,9 +74,15 @@
             margin-block-end: 0;
         }
 
-        h3 {
+        h3,
+        a {
+            cursor: pointer;
             margin-bottom: 0;
             margin-block-start: 0;
+        }
+
+        h3:hover, a:hover {
+            font-style: italic;
         }
     }
 </style>

@@ -3,22 +3,43 @@
         {
             "name": "Q&A Discord Bot",
             "description": "I developed a Discord bot in TypeScript using the Discord.js API, which provides a simple question and answer (Q&A) system. I utilized MongoDB to store the questions and their corresponding status (e.g., solved or unsolved). The bot was hosted on AWS EC2. Additionally, I plan to use Svelte to create a dashboard page that presents an overview of the questions by accessing the database.",
-            "startDate": "July 2022",
-            "endDate": "August 2022",
+            "technologies": [
+                "TypeScript",
+                "Discord.js",
+                "MongoDB",
+                "AWS EC2"
+            ],
+            "startDate": "July",
+            "endDate": "August",
             "link": "https://github.com/KaiErikNiermann/QandA-discordBot"
         },
         {
             "name": "Data analysis bot",
             "description": "I developed a Discord Bot using the pycord API and implemented several features. Firstly, I created a functionality that charts chat activity over a specific time period using matplotlib. Additionally, I integrated a search feature where users can search for images using the bot, leveraging selenium for this purpose. Furthermore, I utilized the Markovify library to enable the bot to mimic the speech patterns of the server through a Markov chain. Lastly, during the development process, I gained valuable knowledge and skills in processing and visualizing large amounts of data.",
-            "startDate": "January 2021",
-            "endDate": "March 2023",
-            "link": "https://github.com/KaiErikNiermann/DiscordBot_practice"
+            "technologies": [
+                "pycord.py",
+                "Python",
+                "matplotlib",
+                "selenium",
+                "Markovify"
+            ],
+            "startDate": "January",
+            "endDate": "March",
+            "link": "https://github.com/KaiErikNiermann/DataAnalysis-discordBot"
         },
         {
             "name": "Portfolio/Notes Page",
             "description": "During this project, I utilized TypeScript and Svelte to create a portfolio and notes website. The website was hosted using Vercel, ensuring its accessibility to users. As part of the website, I curated a comprehensive collection of algorithms implemented in languages such as C, Python, and TypeScript, accompanied by helpful notes. This resource aimed to assist my peers and others seeking programming guidance. Additionally, I developed another website using mdbook and hosted it via GitHub Pages. This website targeted intermediate programmers, providing them with a fast-paced introduction to the fundamentals of Scala.",
-            "startDate": "December 2022",
-            "endDate": "January 2023",
+            "technologies": [
+                "TypeScript",
+                "Svelte",
+                "SQL",
+                "Vercel",
+                "mdbook",
+                "GitHub Pages"
+            ],
+            "startDate": "December",
+            "endDate": "January",
             "link": "https://github.com/KaiErikNiermann/portfolio-page"
         }
     ]

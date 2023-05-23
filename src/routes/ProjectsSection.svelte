@@ -2,6 +2,7 @@
     interface Project {
         name: string;
         description: string;
+        technologies: string[];
         startDate: string;
         endDate: string;
         link: string;
@@ -29,7 +30,7 @@
         justify-content: right;
         align-items: center;
         min-width: calc(1100px - 400px);
-        border: 1px solid white;
+        border-right: 2px solid #171717;
     }
 
     .project-title-section {

@@ -2,6 +2,7 @@
     interface Project {
         name: string;
         description: string;
+        technologies: string[];
         startDate: string;
         endDate: string;
         link: string;
@@ -14,13 +15,20 @@
     <div class="project-card-content">
         <div class="project-title-section">
             <a href="{project.link}"><h1>{project.name}</h1></a>
+            <i class="fa-solid fa-link" style="color: #ffffff;"></i>
+            <p>
+            {#each project.technologies as tech}
+                <strong>{tech + " | "}</strong>
+            {/each}
+            </p>
         </div>
+        <h3>Description</h3>
         <p>{project.description}</p>
     </div>
     <div class="project-card-timeframe">
-        <p>{project.startDate}</p>
+        <p><i>{project.startDate}</i></p>
         <div id="line-sep" />
-        <p>{project.endDate}</p>
+        <p><i>{project.endDate}</i></p>
     </div>
 </div>
 
@@ -34,12 +42,11 @@
     .project-card-content {
         width: 500px;
         height: auto;
-        border: 1px solid white;
         background-color: #444;
         border-radius: 13px;
         font-size: small;
 
-        h1, p {
+        h3, h1, p {
             -webkit-text-fill-color: white;
             -webkit-background-clip: text;
             background-clip: text;
@@ -48,20 +55,25 @@
 
         p {
             padding: 20px;
+            padding-top: 0px;
         }
     }
     
     .project-title-section {
-        border: 1px solid white;
         border-radius: 13px;
         padding: 10px 0;
-        background: linear-gradient(270deg, #DB00FF 0%, #FF5C5C 100%);
+        background: #171717;
 
         h1 {
             -webkit-text-fill-color: white;
             -webkit-background-clip: text;
             background-clip: text;
         }        
+    
+        p {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
     }
 
     .project-card-timeframe {
@@ -70,12 +82,12 @@
         align-items: center;
         height: fit-content;
         justify-content: space-evenly;
-        border: 1px solid white;
+        padding-left: 20px;
     }
 
     #line-sep {
-        width: 1px;
-        height: 100px;
-        background-color: white;
+        width: 2px;
+        height: 120px;
+        background-color: #444444;
     }
 </style>
