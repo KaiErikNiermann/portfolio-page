@@ -2,7 +2,6 @@
     import ExperienceSection from "./ExperienceSection.svelte";
     import InfoSection from "./InfoSection.svelte";
     import ProjectsSection from "./ProjectsSection.svelte";
-    import Table from "../lib/Table.svelte";
 
 </script>
 
