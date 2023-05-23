@@ -6,6 +6,7 @@ This is my portfolio website built using Svelte and TypeScript. It includes info
 
 - Svelte
 - TypeScript
+- HTML/CSS/SCSS/JS
 - SQL
 
 ## Projects
