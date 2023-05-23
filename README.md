@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is my portfolio website built using Svelte and TypeScript. It includes information about me, my projects, and other websites I've created.
+This is my portfolio website built using Svelte and TypeScript. It includes information about me, my projects, and other websites I've created. The website is hosted via vercel.
 
 ## Technologies Used
 
