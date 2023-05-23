@@ -1,38 +1,22 @@
-# create-svelte
+# Portfolio Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is my portfolio website built using Svelte and TypeScript. It includes information about me, my projects, and other websites I've created.
 
-## Creating a project
+## Technologies Used
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Svelte
+- TypeScript
+- SQL
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Projects
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- **Algorithms Website**: A website that revolves around algorithms in different languages.
+- **Scala Guide**: A very fast guide to Scala.
 
-## Developing
+## About Me
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+I am a developer with experience in web development amongst various other things with a passion for creating efficient and effective software. I am constantly learning and exploring new technologies to improve my skills and knowledge. My portfolio page hopefully reflects this.
 
-```bash
-npm run dev
+## Contact Me
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+You can reach me at kai.niermann@gmail.com.
