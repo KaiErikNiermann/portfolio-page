@@ -1,4 +1,18 @@
 <script lang="ts" type="module">
+    interface Project {
+        name: string;
+        description: string;
+        technologies: string[];
+        startDate: string;
+        endDate: string;
+        link: string;
+    }
+    
+    import ProjectCard from "./ProjectCard.svelte";
+    
+    import projects from "./Projects.json";
+ 
+    const my_projects: Project[] = projects.projects;
 </script>
 
 <div class="experience-section-container">
@@ -6,7 +20,9 @@
         <h1>Experience</h1>
     </div>
     <div class="experience-card-section">
-        <!-- <ExperienceCard /> -->
+        {#each my_projects as project}
+            <ProjectCard bind:project />
+        {/each}
     </div>
 </div>
 
@@ -16,8 +32,7 @@
         flex-direction: column;
         justify-content: right;
         align-items: center;
-        height: 100vh;
-        width: 100vw;
+        min-width: calc(1100px - 400px);
     }
 
     .experience-title-section {

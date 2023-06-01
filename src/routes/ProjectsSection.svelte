@@ -7,8 +7,11 @@
         endDate: string;
         link: string;
     }
+    
     import ProjectCard from "./ProjectCard.svelte";
+    
     import projects from "./Projects.json";
+ 
     const my_projects: Project[] = projects.projects;
 </script>
 
@@ -50,6 +53,18 @@
             background-clip: text;
 
             margin-block-end: 0;
+        }
+    }
+
+    @media (max-width: 1800px) {
+        #project-section-container {
+            border-right: none;
+            align-items: center;
+            justify-content: center;
+            
+            .project-title-section {
+                padding-right: 100px;
+            }
         }
     }
 </style>

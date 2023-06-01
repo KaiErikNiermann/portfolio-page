@@ -8,8 +8,10 @@
 <article>
     <div class="main-container">
         <InfoSection />
-        <ProjectsSection />
-        <ExperienceSection />
+        <div id="projects-and-experience">
+            <ProjectsSection />
+            <ExperienceSection />
+        </div>
     </div>
 </article>
 
@@ -18,14 +20,29 @@
         flex: 1;
     }
 
-    .main-container {
+    .main-container, #projects-and-experience {
         display: flex;
         flex-direction: horizontal;
     }
 
-    @media (max-width: 1100px) {
-        .main-container {
+    @media (max-width: 1300px) {
+        .main-container, #projects-and-experience {
             flex-direction: column;
         }
     }
+    
+    @media (max-width: 1800px) {
+        .main-container {
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+        }
+    } 
+    /* lock the website width at 750 px */
+    @media (max-width: 750px) {
+        .main-container {
+            width: 750px;
+        }
+    }
+    
 </style>

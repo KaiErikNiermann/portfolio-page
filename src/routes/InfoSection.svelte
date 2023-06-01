@@ -21,7 +21,13 @@
                 <h3>twitter</h3>
             </li>
             <li>
-                <h3 id="discord-handle" on:click={() => cpyDiscHandle()} on:keydown={() => cpyDiscHandle()}>discord</h3>
+                <h3
+                    id="discord-handle"
+                    on:click={() => cpyDiscHandle()}
+                    on:keydown={() => cpyDiscHandle()}
+                >
+                    discord
+                </h3>
             </li>
         </ul>
     </div>
@@ -29,18 +35,16 @@
 
 <style lang="scss">
     .info-section-container {
-        align-items: center;
-        min-width: 350px;
-        border-right: 2px solid #171717;
-    }
-
-    .info-section-container {
         padding-left: 40px;
         margin: none;
         display: flex;
         flex-direction: column;
         align-items: left;
         justify-content: left;
+        align-items: center;
+        min-width: 300px;
+        width: 300px;
+        border-right: 2px solid #171717;
 
         ul {
             list-style: none;
@@ -52,6 +56,7 @@
             li {
                 margin-block-start: 0;
                 margin-block-end: 0;
+                width: fit-content;
             }
         }
 
@@ -60,6 +65,7 @@
             font-size: 50px;
             line-height: 61px;
             text-align: left;
+            width: fit-content;
 
             background: linear-gradient(
                 270deg,
@@ -81,8 +87,28 @@
             margin-block-start: 0;
         }
 
-        h3:hover, a:hover {
+        h3:hover,
+        a:hover {
             font-style: italic;
+        }
+    }
+
+    @media (max-width: 1800px) {
+        .info-section-container {
+            border-right: none;
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-right: 100px;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
         }
     }
 </style>

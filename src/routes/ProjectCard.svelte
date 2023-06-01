@@ -15,7 +15,6 @@
     <div class="project-card-content">
         <div class="project-title-section">
             <a href="{project.link}"><h1>{project.name}</h1></a>
-            <i class="fa-solid fa-link" style="color: #ffffff;"></i>
             <p>
             {#each project.technologies as tech}
                 <strong>{tech + " | "}</strong>
