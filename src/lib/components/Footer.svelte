@@ -24,4 +24,10 @@
         font-weight: bold;
         background-color: #171717;
     }
+
+    @media (max-width: 750px) {
+        footer {
+            width: 750px;
+        }
+}
 </style>
