@@ -25,7 +25,7 @@
         flex-direction: horizontal;
     }
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1400px) {
         .main-container, #projects-and-experience {
             flex-direction: column;
         }

@@ -33,7 +33,7 @@
         justify-content: right;
         align-items: center;
         min-width: calc(1100px - 400px);
-        border-right: 2px solid #171717;
+        // border-right: 2px solid #171717;
     }
 
     .project-title-section {
@@ -41,6 +41,7 @@
             font-weight: 700;
             font-size: 50px;
             line-height: 61px;
+            padding-right: 30px;
 
             background: linear-gradient(
                 270deg,
@@ -56,15 +57,15 @@
         }
     }
 
+    .project-title-section {
+        padding-right: 100px;
+    }
     @media (max-width: 1800px) {
         #project-section-container {
             border-right: none;
             align-items: center;
             justify-content: center;
             
-            .project-title-section {
-                padding-right: 100px;
-            }
         }
     }
 </style>

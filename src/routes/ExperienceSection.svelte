@@ -56,4 +56,7 @@
         }
     }
 
+    .experience-title-section {
+        padding-right: 100px;
+    }
 </style>

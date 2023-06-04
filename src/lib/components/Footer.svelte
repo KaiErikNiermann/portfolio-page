@@ -17,6 +17,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100px;
+        width: 100vw;
         background-color: #171717;
     }
 

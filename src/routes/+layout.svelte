@@ -7,13 +7,3 @@
 <slot />
 
 <Footer/>
-
-<style> 
-
-@media (max-width: 750px) {
-    .Footer {
-        width: 750px;
-    }
-}
-
-</style>
