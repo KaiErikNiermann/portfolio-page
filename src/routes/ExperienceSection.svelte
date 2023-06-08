@@ -1,5 +1,5 @@
 <script lang="ts" type="module">
-    interface Project {
+    interface ExperienceSectionProps {
         name: string;
         description: string;
         technologies: string[];
@@ -8,11 +8,11 @@
         link: string;
     }
     
-    import ProjectCard from "./ProjectCard.svelte";
+    import ProjectCard from "./InformationCard.svelte";
     
-    import projects from "./Projects.json";
+    import experience from "./Experience.json";
  
-    const my_projects: Project[] = projects.projects;
+    const my_experience: ExperienceSectionProps[] = experience.experience;
 </script>
 
 <div class="experience-section-container">
@@ -20,8 +20,8 @@
         <h1>Experience</h1>
     </div>
     <div class="experience-card-section">
-        {#each my_projects as project}
-            <ProjectCard bind:project />
+        {#each my_experience as information}
+            <ProjectCard bind:information />
         {/each}
     </div>
 </div>

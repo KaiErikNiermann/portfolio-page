@@ -8,7 +8,7 @@
         link: string;
     }
     
-    import ProjectCard from "./ProjectCard.svelte";
+    import ProjectCard from "./InformationCard.svelte";
     
     import projects from "./Projects.json";
  
@@ -20,8 +20,8 @@
         <h1>Projects</h1>
     </div>
     <div class="project-card-section">
-        {#each my_projects as project}
-            <ProjectCard bind:project />
+        {#each my_projects as information}
+            <ProjectCard bind:information />
         {/each}
     </div>
 </div>
