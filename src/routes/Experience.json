@@ -1,0 +1,17 @@
+{
+    "experience": [
+        {
+            "name": "Teaching Assistant",
+            "description": "During the first half of 2023 I was a teaching assistant for the course \"Web Techology\" and \"Computer Programming Project\" at the VU Amsterdam. For these courses I managaed a group of 20 students during practicals and assisted them with their work. Furthermore I insured that they each individually abole to sucessfuly complete the course. Additionally I graded their assignments.",
+            "technologies": [
+                "HTML/CSS/JS/TS",
+                "SQL",
+                "C",
+                "GTK/Raylib"
+            ],
+            "startDate": "January",
+            "endDate": "June",
+            "link": ""
+        }
+    ]
+}
