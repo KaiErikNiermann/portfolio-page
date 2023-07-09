@@ -60,6 +60,7 @@
     .project-title-section {
         padding-right: 100px;
     }
+    
     @media (max-width: 1800px) {
         #project-section-container {
             border-right: none;

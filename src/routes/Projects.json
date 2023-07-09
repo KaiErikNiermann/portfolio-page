@@ -1,8 +1,8 @@
 {
     "projects": [
         {
-            "name": "Q&A Discord Bot and Dashboard",
-            "description": "I developed a Discord bot in TypeScript using the Discord.js API, which provides a simple question and answer (Q&A) system. I utilized MongoDB to store the questions and their corresponding status (e.g., solved or unsolved). The bot was hosted on AWS EC2. Additionally, I plan to used Svelte to create a dashboard page that presents an overview of the questions by accessing the database and allows users to anser them using ther website.",
+            "name": "Q&A Bot and Dashboard",
+            "description": "I developed a Discord bot in TypeScript using the Discord.js API, which provides a simple question and answer (Q&A) system. I utilized MongoDB to store the questions and their corresponding status (e.g., solved or unsolved). The bot was hosted on AWS EC2. Additionally, I used Svelte to create a dashboard page that presents an overview of the questions by accessing the database and allows users to anser them using the website.",
             "technologies": [
                 "TypeScript",
                 "Discord.js",
