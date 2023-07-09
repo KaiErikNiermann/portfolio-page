@@ -38,7 +38,7 @@
             align-items: center;
         }
     } 
-    /* lock the website width at 750 px */
+
     @media (max-width: 750px) {
         .main-container {
             width: 750px;

@@ -8,7 +8,7 @@
         link: string;
     }
     
-    import ProjectCard from "./InformationCard.svelte";
+    import ExperienceCard from "./InformationCard.svelte";
     
     import experience from "./Experience.json";
  
@@ -21,7 +21,7 @@
     </div>
     <div class="experience-card-section">
         {#each my_experience as information}
-            <ProjectCard bind:information />
+            <ExperienceCard bind:information />
         {/each}
     </div>
 </div>

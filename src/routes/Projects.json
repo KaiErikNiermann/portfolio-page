@@ -1,8 +1,8 @@
 {
     "projects": [
         {
-            "name": "Q&A Discord Bot",
-            "description": "I developed a Discord bot in TypeScript using the Discord.js API, which provides a simple question and answer (Q&A) system. I utilized MongoDB to store the questions and their corresponding status (e.g., solved or unsolved). The bot was hosted on AWS EC2. Additionally, I plan to use Svelte to create a dashboard page that presents an overview of the questions by accessing the database.",
+            "name": "Q&A Discord Bot and Dashboard",
+            "description": "I developed a Discord bot in TypeScript using the Discord.js API, which provides a simple question and answer (Q&A) system. I utilized MongoDB to store the questions and their corresponding status (e.g., solved or unsolved). The bot was hosted on AWS EC2. Additionally, I plan to used Svelte to create a dashboard page that presents an overview of the questions by accessing the database and allows users to anser them using ther website.",
             "technologies": [
                 "TypeScript",
                 "Discord.js",
@@ -41,6 +41,19 @@
             "startDate": "December",
             "endDate": "January",
             "link": "https://github.com/KaiErikNiermann/portfolio-page"
+        },
+        {
+            "name": "Sister city visualization",
+            "description": "I created a Jupyter notebook using Python to investigate the network of sister cities. By utilizing the bs4 library, I generated a comprehensive dataset comprising more than 15 thousand sister cities. To analyze different facets of this network, I employed networkx and pandas libraries. Additionally, I utilized the basemap library to generate map visualizations that depict the connections within this network.",
+            "technologies": [
+                "Python",
+                "matplotlib",
+                "pandas",
+                "NumPy"
+            ],
+            "startDate": "June",
+            "endDate": "July",
+            "link": "https://github.com/KaiErikNiermann/sister-city-visualizer"
         }
     ]
 }

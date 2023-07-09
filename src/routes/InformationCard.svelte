@@ -17,7 +17,11 @@
             <a href="{information.link}"><h1>{information.name}</h1></a>
             <p>
             {#each information.technologies as tech}
-                <strong>{tech + " | "}</strong>
+                {#if tech == information.technologies[information.technologies.length - 1]}
+                    <strong>{tech}</strong>
+                {:else}
+                    <strong>{tech + ", "}</strong>
+                {/if}
             {/each}
             </p>
         </div>
@@ -25,9 +29,9 @@
         <p>{information.description}</p>
     </div>
     <div class="information-card-timeframe">
-        <p><i>{information.startDate}</i></p>
+        <p>{information.startDate}</p>
         <div id="line-sep" />
-        <p><i>{information.endDate}</i></p>
+        <p>{information.endDate}</p>
     </div>
 </div>
 
@@ -46,6 +50,7 @@
         font-size: small;
 
         h3, h1, p {
+            background-color: #171717;
             -webkit-text-fill-color: white;
             -webkit-background-clip: text;
             background-clip: text;
@@ -62,14 +67,15 @@
         border-radius: 13px;
         padding: 10px 0;
         background: #171717;
-
-        h1 {
+        
+        h1, p {
             -webkit-text-fill-color: white;
             -webkit-background-clip: text;
             background-clip: text;
         }        
     
-        p {
+        p, strong {
+            background-color: #171717;
             padding-bottom: 0;
             padding-top: 0;
         }
