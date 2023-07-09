@@ -73,9 +73,9 @@
             -webkit-background-clip: text;
             background-clip: text;
         }        
-    
+        
         p, strong {
-            background-color: #171717;
+            background: #171717;
             padding-bottom: 0;
             padding-top: 0;
         }

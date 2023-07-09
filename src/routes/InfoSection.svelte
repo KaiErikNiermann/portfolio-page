@@ -87,9 +87,18 @@
             margin-block-start: 0;
         }
 
+        h3 {
+            padding-left: 10px;
+            border-left: 2px solid transparent;
+
+            padding-right: 10px;
+            border-right: 2px solid transparent;
+        }
+
         h3:hover,
         a:hover {
-            font-style: italic;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
         }
     }
 
@@ -102,7 +111,7 @@
             flex-direction: column;
             padding-right: 100px;
         }
-        
+
         ul {
             display: flex;
             flex-direction: row;

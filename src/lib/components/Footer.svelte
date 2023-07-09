@@ -21,7 +21,7 @@
         background-color: #171717;
     }
 
-    p {
+    p, a {
         font-weight: bold;
         background-color: #171717;
     }

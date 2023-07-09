@@ -1,6 +1,8 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@import "../node_modules/inter-ui/inter.css";
+
 * {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: $color-background;
     color: $default-font-color;
     // remove all underlines
