@@ -45,9 +45,10 @@
             <p>{information.description}</p>
         </div>
     </div>
+    
     <div
         class:information-card-timeframe={!hidden}
-        class:inactive={hidden}
+        class:inactive-timeframe={hidden}
     >
         <p>{information.startDate}</p>
         <div id="line-sep" />
@@ -58,6 +59,8 @@
 <style lang="scss">
     .information-card {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         padding: 25px 0;
     }
@@ -135,6 +138,15 @@
         }
     }
 
+    .inactive-timeframe {
+        visibility: hidden;
+        #line-sep {
+            display: none;
+        }
+        padding-left: 20px;
+
+    }
+    
     .inactive {
         display: none;
     }
