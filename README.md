@@ -7,12 +7,6 @@ This is my portfolio website built using Svelte and TypeScript. It includes info
 - Svelte
 - TypeScript
 - HTML/SCSS/JS
-- SQL
-
-## Projects
-
-- **Algorithms Website**: A website that revolves around algorithms in different languages.
-- **Scala Guide**: A very fast guide to Scala.
 
 ## About Me
 
@@ -20,4 +14,4 @@ I am a developer with experience in web development amongst various other things
 
 ## Contact Me
 
-You can reach me at kai.niermann@gmail.com.
+You can reach me at [kai.niermann@gmail.com](kai.niermann@gmail.com)
