@@ -23,11 +23,11 @@
                         hidden = !hidden;
                     }}
                 >
-                {#if hidden}
-                    View
-                {:else}
-                    Hide
-                {/if}
+                    {#if hidden}
+                        View
+                    {:else}
+                        Hide
+                    {/if}
                 </button>
             </div>
             <p>
@@ -40,12 +40,15 @@
                 {/each}
             </p>
         </div>
-        <div class:information-card-description={!hidden} class:inactive={hidden}>
+        <div
+            class:information-card-description={!hidden}
+            class:inactive={hidden}
+        >
             <h3>Description</h3>
             <p>{information.description}</p>
         </div>
     </div>
-    
+
     <div
         class:information-card-timeframe={!hidden}
         class:inactive-timeframe={hidden}
@@ -117,7 +120,6 @@
             padding-top: 0px;
         }
     }
-
     .information-title-section {
         border-radius: 13px;
         padding: 10px 0;
@@ -144,9 +146,8 @@
             display: none;
         }
         padding-left: 20px;
-
     }
-    
+
     .inactive {
         display: none;
     }
