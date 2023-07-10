@@ -33,7 +33,6 @@
         justify-content: right;
         align-items: center;
         min-width: calc(1100px - 400px);
-        // border-right: 2px solid #171717;
     }
 
     .project-title-section {
@@ -43,15 +42,7 @@
             line-height: 61px;
             padding-right: 30px;
 
-            background: linear-gradient(
-                270deg,
-                #ffffff 4.03%,
-                #0500fa 109.47%,
-                #ffffff 109.48%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            @include gradient-text;
 
             margin-block-end: 0;
         }

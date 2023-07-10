@@ -36,11 +36,8 @@
 <style lang="scss">
     .info-section-container {
         padding-left: 40px;
-        margin: none;
         display: flex;
         flex-direction: column;
-        align-items: left;
-        justify-content: left;
         align-items: center;
         min-width: 300px;
         width: 300px;
@@ -48,14 +45,10 @@
 
         ul {
             list-style: none;
-            padding-left: 0;
             padding: 0;
-            padding-inline-start: 0;
-            margin-block-start: 0;
-            margin-block-end: 0;
+            margin: 0;
             li {
-                margin-block-start: 0;
-                margin-block-end: 0;
+                margin: 0;
                 width: fit-content;
             }
         }
@@ -66,31 +59,19 @@
             line-height: 61px;
             text-align: left;
             width: fit-content;
-
-            background: linear-gradient(
-                270deg,
-                #ffffff 25%,
-                #0400ff 109.47%,
-                #ffffff 109.48%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-
-            margin-block-end: 0;
+            @include gradient-text;
+            margin-bottom: 0;
         }
 
         h3,
         a {
             cursor: pointer;
-            margin-bottom: 0;
-            margin-block-start: 0;
+            margin: 0;
         }
 
         h3 {
             padding-left: 10px;
             border-left: 2px solid transparent;
-
             padding-right: 10px;
             border-right: 2px solid transparent;
         }
@@ -100,24 +81,22 @@
             border-left: 2px solid white;
             border-right: 2px solid white;
         }
-    }
 
-    @media (max-width: 1800px) {
-        .info-section-container {
+        @media (max-width: 1800px) {
             border-right: none;
             width: fit-content;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             padding-right: 100px;
-        }
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+            }
         }
     }
 </style>

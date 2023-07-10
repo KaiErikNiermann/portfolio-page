@@ -63,7 +63,7 @@
     .information-card {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 25px 0;
     }

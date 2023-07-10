@@ -1,3 +1,15 @@
 /* Variables and mixins declared here will be available in all other SCSS files */
 $color-background: #202124;
 $default-font-color: #fff;
+
+@mixin gradient-text {
+    background: linear-gradient(
+        270deg,
+        #ffffff 25%,
+        #0400ff 109.47%,
+        #ffffff 109.48%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
