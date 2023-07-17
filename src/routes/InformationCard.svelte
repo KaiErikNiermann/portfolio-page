@@ -66,6 +66,7 @@
         justify-content: space-evenly;
         align-items: center;
         padding: 25px 0;
+        width: 100%;
     }
 
     .information-card-content {
@@ -146,6 +147,7 @@
             display: none;
         }
         padding-left: 20px;
+        width: 50px
     }
 
     .inactive {
@@ -159,6 +161,7 @@
         height: fit-content;
         justify-content: space-evenly;
         padding-left: 20px;
+        width: 50px
     }
 
     #line-sep {

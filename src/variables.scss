@@ -1,5 +1,11 @@
 /* Variables and mixins declared here will be available in all other SCSS files */
 $color-background: #202124;
+$color-background-gradient: linear-gradient(
+    45deg,
+    $color-background 80%,
+    lightblue 100%
+);
+
 $default-font-color: #fff;
 
 @mixin gradient-text {

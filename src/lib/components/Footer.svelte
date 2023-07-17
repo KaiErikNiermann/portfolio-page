@@ -1,6 +1,6 @@
 <footer>
     <p>
-        website made by
+        page made by
         <a
             href="https://github.com/KaiErikNiermann"
             target="_blank">@Kai Erik Niermann</a

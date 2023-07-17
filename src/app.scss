@@ -3,7 +3,7 @@
 
 * {
     font-family: 'Inter', sans-serif;
-    background-color: $color-background;
+    // background: $color-background-gradient;
     color: $default-font-color;
     // remove all underlines
     text-decoration: none;
@@ -11,6 +11,8 @@
 
 body {
     display: flex;
+    background-color: $color-background;
+    // background: $color-background-gradient;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
