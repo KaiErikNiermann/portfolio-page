@@ -15,6 +15,29 @@ declare global {
 			startDate: string;
 			endDate: string;
 		}
+
+		type Categories = 
+			'sveltekit' | 
+			'svelte' | 
+			'typescript' |
+			'C' |
+			'python' |
+			'docker' | 
+			'mongodb' |
+			'HTML' |
+			'CSS' |
+			'SCSS' 
+
+		type Post = { 
+			title: string; 
+			slug: string;
+			description: string;
+			date: string;
+			categories: Categories[];
+			published: boolean;
+			github: string | null;
+			project: number;
+		}
 	}
 }
 

@@ -41,7 +41,6 @@
         align-items: center;
         min-width: 300px;
         width: 300px;
-        border-right: 2px solid #171717;
 
         ul {
             list-style: none;

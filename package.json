@@ -12,6 +12,7 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.5.0",
+    "mdsvex": "^0.11.0",
     "sass": "^1.62.0",
     "svelte": "^3.54.0",
     "svelte-check": "^3.0.1",
@@ -22,12 +23,24 @@
   },
   "type": "module",
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.0.5",
+    "@fontsource/manrope": "^5.0.5",
     "@vercel/analytics": "^1.0.1",
     "@vercel/postgres": "^0.3.0",
     "gh-pages": "^5.0.0",
     "inter-ui": "^3.19.3",
     "knex": "^2.4.2",
+    "lucide-svelte": "^0.263.0",
+    "npmcli": "^1.2.2",
+    "open-props": "^1.5.10",
     "pg": "^8.11.0",
+    "shiki": "^0.14.3",
     "vercel": "^29.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "semver@>=6.0.0 <6.3.1": ">=6.3.1",
+      "semver@>=7.0.0 <7.5.2": ">=7.5.2"
+    }
   }
 }
