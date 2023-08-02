@@ -53,7 +53,7 @@
     }
 
     .title {
-        font-size: var(--font-size-fluid-1);
+        font-size: 25px;
         text-transform: capitalize;
     }
 
