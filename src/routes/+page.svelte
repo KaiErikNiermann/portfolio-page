@@ -2,8 +2,6 @@
     import PostSection from "./PostSection.svelte";
     import InfoSection from "./InfoSection.svelte";
     export let data: { posts: App.Post[] } = { posts: [] };
-
-    console.log(data.posts);
 </script>
 
 <article>
