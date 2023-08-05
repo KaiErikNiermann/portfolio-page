@@ -18,7 +18,7 @@
         justify-content: center;
         align-items: center;
         min-height: 80px;
-        width: 100vw;
+        width: 100%;
         border-top: 2px solid var(--border);
         background-color: #171717;
     }
