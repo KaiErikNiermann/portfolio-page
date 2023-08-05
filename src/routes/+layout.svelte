@@ -27,5 +27,15 @@
 </div>
 
 <style>
-    
+    div.layout {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        flex: 1;
+    }
+
 </style>

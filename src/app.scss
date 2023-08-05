@@ -17,6 +17,11 @@
 //     margin: 0;
 // }
 
+a > * { 
+	color: lightblue;
+	text-decoration: none;
+}
+
 html {
 	/* font */
 	--font-sans: 'Manrope', sans-serif;
