@@ -11,6 +11,12 @@
     inject({ mode: dev ? 'development' : 'production' });
 </script>
 
+<svelte:head>
+    <link
+        href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css"
+        rel="stylesheet"
+    />
+</svelte:head>
 
 <div class="layout">
     <main>
