@@ -1,13 +1,33 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { formatDate } from '$lib/utils'
+	import { onMount } from 'svelte';
+	import type { KatexOptions } from 'katex';
+	import katex from 'katex';
+	import renderMathInElement from 'katex/contrib/auto-render';
+	export let data;
 
-	export let data
+	onMount(() => {
+		renderMathInElement(document.body, {
+			delimiters: [
+				{ left: "$$", right: "$$", display: true },
+				{ left: "$", right: "$", display: false },
+				{ left: "\\(", right: "\\)", display: false },
+				{ left: "\\[", right: "\\]", display: true }
+			],
+		});
+	})
 </script>
 
 <svelte:head>
 	<title>{data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+
+	<!-- KaTeX CSS and JavaScript links -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 </svelte:head>
 
 <article>
