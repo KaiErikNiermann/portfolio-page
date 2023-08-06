@@ -1,13 +1,10 @@
 <footer id="site-footer">
     <p>
-        page made by
         <a
             href="https://github.com/KaiErikNiermann"
-            target="_blank">@Kai Erik Niermann</a
+            target="_blank">Kai Erik Niermann</a
         >
-        using
-        <a href="https://kit.svelte.dev" target="_blank"> SvelteKit </a>
-        and TypeScript.
+         | 2023
     </p>
 </footer>
 
@@ -26,7 +23,7 @@
 
     p,
     a {
-        font-weight: bold;
+        color: var(--text-2);
     }
 
     @media (max-width: 750px) {

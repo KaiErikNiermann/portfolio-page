@@ -1,5 +1,6 @@
 <script>
-    import Footer from "$lib/components/footer.svelte";
+    import Footer from "./footer.svelte";
+    import PageTransition from './Transition.svelte'
     import 'open-props/style'
 	import 'open-props/buttons'
     import "../app.scss";
@@ -8,6 +9,8 @@
     import { dev } from '$app/environment';
     import { inject } from '@vercel/analytics';
     inject({ mode: dev ? 'development' : 'production' });
+
+    export let data
 </script>
 
 <svelte:head>
@@ -19,7 +22,9 @@
 
 <div class="layout">
     <main>
-        <slot />
+        <PageTransition url={data.url}>
+            <slot></slot>
+        </PageTransition>
     </main>
 </div>
 

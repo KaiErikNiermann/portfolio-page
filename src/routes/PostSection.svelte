@@ -10,7 +10,7 @@
             {#each data.posts as post}
                 {#if post.project == section_type}
                     <li class="post">
-                        <a href={post.github === null ? post.slug : post.github} class="title">{post.title}</a>
+                        <a href={post.github === null ? `${post.slug}` : post.github} class="title">{post.title}</a>
                         <p class="date">{post.date}</p>
                         <p class="description">{post.description}</p>
                     </li>

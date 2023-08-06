@@ -1,11 +1,11 @@
 <script lang="ts">
     import PostSection from "./PostSection.svelte";
     import InfoSection from "./InfoSection.svelte";
-    import Footer from "$lib/components/footer.svelte";
-    export let data: { posts: App.Post[] } = { posts: [] };
+    import Footer from "./footer.svelte";
+    export let data;
 </script>
 
-<article>
+<div class="main-div">
     <div class="main-container">
         <InfoSection />
         <div id="projects-and-experience">
@@ -14,10 +14,10 @@
         </div>
     </div>
     <Footer/>
-</article>
+</div>
 
 <style>
-    article {
+    div.main-div {
         flex: 1;
     }
 
@@ -48,3 +48,4 @@
         }
     }
 </style>
+
