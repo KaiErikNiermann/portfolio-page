@@ -27,6 +27,15 @@
 		margin-inline: auto;
 	}
 
+	hgroup {
+		margin-inline: var(--size-3);
+	}
+
+	div.prose {
+		margin-inline: var(--size-3);
+		min-width: auto;
+	}
+
 	h1 {
 		text-transform: capitalize;
 	}
@@ -35,4 +44,5 @@
 		margin-top: var(--size-2);
 		color: var(--text-2);
 	}
+
 </style>

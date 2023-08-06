@@ -115,6 +115,15 @@ html {
 html,
 body {
 	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+@media (max-width: 750px) {
+	html,
+	body {
+		width: auto;
+	}
 }
 
 html {

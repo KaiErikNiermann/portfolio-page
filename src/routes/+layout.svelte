@@ -1,5 +1,4 @@
 <script>
-    import Header from "$lib/components/header.svelte";
     import Footer from "$lib/components/footer.svelte";
     import 'open-props/style'
 	import 'open-props/buttons'
@@ -22,8 +21,6 @@
     <main>
         <slot />
     </main>
-    
-    <Footer/>
 </div>
 
 <style>
@@ -39,4 +36,9 @@
         flex: 1;
     }
 
+    @media (max-width: 750px) {
+        div.layout {
+            width: 100%;
+        }
+    }
 </style>

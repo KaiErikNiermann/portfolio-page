@@ -1,6 +1,7 @@
 <script lang="ts">
     import PostSection from "./PostSection.svelte";
     import InfoSection from "./InfoSection.svelte";
+    import Footer from "$lib/components/footer.svelte";
     export let data: { posts: App.Post[] } = { posts: [] };
 </script>
 
@@ -12,6 +13,7 @@
             <PostSection {data} section_type={0} />
         </div>
     </div>
+    <Footer/>
 </article>
 
 <style>

@@ -17,6 +17,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
         min-height: 80px;
         width: 100%;
         border-top: 2px solid var(--border);
