@@ -29,4 +29,3 @@ I quite enjoyed working with scala at university additionally I felt the quiz fo
 I collaborated on this project with another student. Together we consolidated resources and notes from the Discord server and other sources to create a centralized location people can get high quality information from, completely for free. This has helped thousands of students based on our analytics and feedback from students.
 
 ### [_CS Hub_](https://lausta.notion.site/CS-Hub-6e7cae889f844cb59ae5f1809c88e553)
-
