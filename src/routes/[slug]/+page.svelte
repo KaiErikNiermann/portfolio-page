@@ -1,22 +1,6 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { formatDate } from '$lib/utils'
-	import { onMount } from 'svelte';
-	import type { KatexOptions } from 'katex';
-	import katex from 'katex';
-	import renderMathInElement from 'katex/contrib/auto-render';
 	export let data;
-
-	// onMount(() => {
-	// 	renderMathInElement(document.body, {
-	// 		delimiters: [
-	// 			{ left: "$$", right: "$$", display: true },
-	// 			{ left: "$", right: "$", display: false },
-	// 			{ left: "\\(", right: "\\)", display: false },
-	// 			{ left: "\\[", right: "\\]", display: true }
-	// 		],
-	// 	});
-	// })
 </script>
 
 <svelte:head>

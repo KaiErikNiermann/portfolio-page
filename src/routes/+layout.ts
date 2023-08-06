@@ -1,4 +1,4 @@
-export async function load({ url }) {
+export async function load({ url: url }) {
 	return {
 		url: url.pathname
 	}

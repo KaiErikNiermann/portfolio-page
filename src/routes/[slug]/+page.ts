@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit'
 import katex from 'katex';
 
 
-export async function load({ params }) {
+export async function load({ params: params }) {
 	try {
 		const post : {default: any, metadata: App.Post} = await import(`../../posts/${params.slug}.md`)
 		console.log(post.default)
