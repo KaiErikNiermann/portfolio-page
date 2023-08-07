@@ -7,10 +7,11 @@ This is my portfolio website built using Svelte and TypeScript. It includes info
 - Svelte
 - TypeScript
 - HTML/SCSS/JS
+- mdsvex
 
 ## About Me
 
-I am a developer with experience in web development amongst various other things with a passion for creating efficient and effective software. I am constantly learning and exploring new technologies to improve my skills and knowledge. My portfolio page hopefully reflects this.
+I am a software engineer with experience in web development amongst various other things. I enjoy creating software to both solve problems but also explore any new interests of mine. I am constantly learning and exploring new technologies to improve my skills and knowledge. My portfolio page hopefully reflects this.
 
 ## Contact Me
 
