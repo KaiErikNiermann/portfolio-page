@@ -7,7 +7,7 @@ categories:
   - svelte
 published: true
 github: https://github.com/KaiErikNiermann/QandA-discord-bot
-project: true
+post_type: true
 ---
 
 

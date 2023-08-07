@@ -1,21 +1,16 @@
 <script lang="ts" type="module">
+    export let section_type: number = 3;
     export let data: { posts: App.Post[] } = { posts: [] };
-    export let section_type: number;
 </script>
 
 <div class="post-section-container">
     <div class="post-card-section">
-        <h1 id="post-title">{section_type === 1 ? "Projects" : "Experience"}</h1>
+        <h1 id="post-title">Blog posts</h1>
         <ul class="posts">
             {#each data.posts as post}
                 {#if post.post_type == section_type}
                     <li class="post">
-                        <a href={post.github === null ? `${post.slug}` : post.github} class="title">
-                            {#if post.github !== null}
-                                <i class="fa-brands fa-github"></i>
-                            {/if}
-                            {post.title}
-                        </a>
+                        <a href={post.github === null ? `${post.slug}` : post.github} class="title">{post.title}</a>
                         <p class="date">{post.date}</p>
                         <p class="description">{post.description}</p>
                     </li>

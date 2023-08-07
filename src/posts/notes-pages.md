@@ -7,7 +7,7 @@ categories:
   - svelte
 published: true
 github: null
-project: true
+post_type: true
 ---
 
 ## VU/CS/Amst Guide
@@ -16,17 +16,16 @@ When I first came to the VU I found it rather hard to quickly get an overview of
 
 The guide is by no means comprehensive, but its an excellent starting point, in 2023 I think turned the [_original guide_](https://docs.google.com/document/d/1C80i2UDWaRWUxjWfsAv_GPEbWEGHwQDpaUrxYtGrBpY/edit) into a gitbook so it would look overall more professional but especially just work better on mobile making it potentially easier to share.
 
-### [_VU/CS/AMST Guide_](https://github.com/KaiErikNiermann/VU-Amst-Guide)
+### > [_VU/CS/AMST Guide_](https://github.com/KaiErikNiermann/VU-Amst-Guide)
 
 ## Scala Guide
 
 I quite enjoyed working with scala at university additionally I felt the quiz format the prof created was an interesting approach to learning the compexities of a language. So I thought that I would use my notes on these quizzes and scala and transform them into a guide for the language as a hole, in the sort of fast paced fashion alot of modern stuff is written.
 
-### [_Scala Guide_](https://github.com/KaiErikNiermann/scala-guide)
+### > [_Scala Guide_](https://github.com/KaiErikNiermann/scala-guide)
 
 ## CS Hub
 
 I collaborated on this project with another student. Together we consolidated resources and notes from the Discord server and other sources to create a centralized location people can get high quality information from, completely for free. This has helped thousands of students based on our analytics and feedback from students.
 
-### [_CS Hub_](https://lausta.notion.site/CS-Hub-6e7cae889f844cb59ae5f1809c88e553)
-
+### > [_CS Hub_](https://lausta.notion.site/CS-Hub-6e7cae889f844cb59ae5f1809c88e553)

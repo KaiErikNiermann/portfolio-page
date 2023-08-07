@@ -10,14 +10,14 @@
 }
 
 /* Default link styles */
-a {
+a, a > * {
     color: white; 
     text-decoration: none; 
     transition: color 0.2s; 
 }
 
 /* Hover styles */
-a:hover {
+a:hover, a:hover > * {
     color: #0056b3; 
 }
 

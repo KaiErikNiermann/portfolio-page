@@ -6,5 +6,5 @@ categories:
   - python
 published: true
 github: https://github.com/KaiErikNiermann/DataAnalysis-discord-bot
-project: true
+post_type: true
 ---

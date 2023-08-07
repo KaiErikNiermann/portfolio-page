@@ -7,6 +7,6 @@ categories:
   - svelte
 published: true
 github: 'https://github.com/KaiErikNiermann/portfolio-page'
-project: true
+post_type: true
 ---
 

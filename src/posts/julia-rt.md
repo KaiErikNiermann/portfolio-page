@@ -7,7 +7,7 @@ categories:
   - svelte
 published: true
 github: https://github.com/KaiErikNiermann/julia-rt
-project: true
+post_type: true
 ---
 
 

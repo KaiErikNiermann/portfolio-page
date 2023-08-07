@@ -36,7 +36,7 @@ declare global {
 			categories: Categories[];
 			published: boolean;
 			github: string | null;
-			project: number;
+			post_type: number;
 		}
 	}
 }

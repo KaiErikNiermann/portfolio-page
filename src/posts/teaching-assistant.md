@@ -7,7 +7,7 @@ categories:
   - svelte
 published: true
 github: null
-project: false
+post_type: false
 ---
 
 ## Description
