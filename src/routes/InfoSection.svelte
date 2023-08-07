@@ -36,7 +36,7 @@
     </div>
     <!-- Blog button -->
     <a href="/blog">
-        <h3>> POSTS</h3>
+        <h3>Blog posts</h3>
     </a>
 </div>
 
