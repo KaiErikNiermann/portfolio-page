@@ -2,8 +2,7 @@
 @import "../node_modules/inter-ui/inter.css";
 @import "@fontsource/manrope";
 @import "@fontsource/jetbrains-mono";
-@import '@fortawesome/fontawesome-free/css/all.css';
-@import '@fortawesome/fontawesome-free/js/all.js';
+@import '../node_modules/@fortawesome/fontawesome-free';
 
 * {
     font-family: "Inter", sans-serif;
