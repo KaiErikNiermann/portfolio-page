@@ -4,6 +4,8 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkToc from 'remark-toc'
 import remarkMath from "remark-math";
 import rehypeSlug from 'rehype-slug'
+import urls from "rehype-urls"
+import addClasses from "rehype-add-classes"
 import rehypeKatexSvelte from "rehype-katex-svelte";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import { mdsvex } from 'mdsvex';
@@ -19,7 +21,8 @@ const mdsvexOptions = {
   // Render katex components inside @html blocks, aka {@html "<katex output html>"}
   rehypePlugins: [
     rehypeKatexSvelte,
-    rehypeSlug
+    rehypeSlug, 
+    [addClasses, {"ul, ol": "list-style"}]
   ],
 }
 
