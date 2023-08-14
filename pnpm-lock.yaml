@@ -15,6 +15,9 @@ dependencies:
   '@fontsource/manrope':
     specifier: ^5.0.5
     version: 5.0.5
+  '@fortawesome/fontawesome':
+    specifier: ^1.1.8
+    version: 1.1.8
   '@fortawesome/fontawesome-free':
     specifier: ^6.4.2
     version: 6.4.2
@@ -1744,10 +1747,23 @@ packages:
     resolution: {integrity: sha512-ku0/HHUM3raBb8QMK1+jFyQXBmJ6EBmMPewxCPKbB7Il4nwC16rrJOfHOzsfOxI04mnwTzMDBMHDIzRvDsuycw==}
     dev: false
 
+  /@fortawesome/fontawesome-common-types@0.1.7:
+    resolution: {integrity: sha512-ego8jRVSHfq/iq4KRZJKQeUAdi3ZjGNrqw4oPN3fNdvTBnLCSntwVCnc37bsAJP9UB8MhrTfPnZYxkv2vpS4pg==}
+    engines: {node: '>=6'}
+    dev: false
+
   /@fortawesome/fontawesome-free@6.4.2:
     resolution: {integrity: sha512-m5cPn3e2+FDCOgi1mz0RexTUvvQibBebOUlUlW0+YrMjDTPkiJ6VTKukA1GRsvRw+12KyJndNjj0O4AgTxm2Pg==}
     engines: {node: '>=6'}
     requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome@1.1.8:
+    resolution: {integrity: sha512-c0/MtkPVT0fmiFcCyYoPjkG9PkMOvfrZw2+0BaJ+Rh6UEcK1AR/LaRgrHHjUkbAbs9LXxQJhFS8CJ4uSnK2+JA==}
+    engines: {node: '>=6'}
+    deprecated: This package is deprecated. See https://git.io/fNCzJ for information about upgrading.
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 0.1.7
     dev: false
 
   /@gar/promisify@1.1.3:
