@@ -20,7 +20,7 @@ export async function GET({ fetch }) {
 					.map(
 						(post) => `
 						<item>
-							<title>${post.title}]</title>
+							<title>${post.title}</title>
 							<description>${post.description}</description>
 							<link>${config.url}/${post.slug}</link>
 							<guid isPermaLink="true">${config.url}/${post.slug}</guid>
