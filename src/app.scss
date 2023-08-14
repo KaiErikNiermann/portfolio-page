@@ -141,13 +141,19 @@ img {
     border-radius: var(--radius-3);
 }
 
-ul,
-ol {
+ul.list-style,
+ol.list-style {
+    list-style: var(--text-1);
     padding: 0 0 0 1rem; 
 }
 
-li {
+li.list-style {
     padding-inline-start: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
 }
 
 .surface-1 {
