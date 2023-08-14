@@ -38,7 +38,7 @@ ProfileView.@profview myfunction();
 Then you need to **run this in the repl** (it breaks otherwise) which depending on the platform you are on should either give you a nice window in VSCode or in my case (using WSL2) I get a GUI window that pops up.
 
 <figure style="display: flex; align-items: center; flex-direction: column;">
-  <img src="src/posts/assets/profile_view_example.png" alt="ProfileView gui" style="width: 100%;">
+  <img src="/assets/profile_view_example.png" alt="ProfileView gui" style="width: 100%;">
   <figcaption>ProfileView GUI using WSL2</figcaption>
 </figure>
 
@@ -71,7 +71,7 @@ PProf.Allocs.pprof()
 That will yield you a nice visualization like this.
 
 <figure style="display: flex; align-items: center; flex-direction: column;">
-  <img src="src/posts/assets/pprof_example.png" alt="ProfileView gui" style="width: 100%;">
+  <img src='/assets/pprof_example.png' alt="ProfileView gui" style="width: 100%;">
   <figcaption>PProf web view</figcaption>
 </figure>
 
