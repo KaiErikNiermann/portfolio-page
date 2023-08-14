@@ -1,3 +1,5 @@
+export const prerender = true
+
 import * as config from '$lib/config'
 
 export async function GET({ fetch }) {
@@ -7,7 +9,8 @@ export async function GET({ fetch }) {
 	const headers = { 'Content-Type': 'application/xml' }
 
 	const xml = `
-		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+	
+	<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 			<channel>
 				<title>${config.title}</title>
 				<description>${config.description}</description>
@@ -17,7 +20,7 @@ export async function GET({ fetch }) {
 					.map(
 						(post) => `
 						<item>
-							<title>${post.title}</title>
+							<title>${post.title}]</title>
 							<description>${post.description}</description>
 							<link>${config.url}/${post.slug}</link>
 							<guid isPermaLink="true">${config.url}/${post.slug}</guid>
@@ -25,7 +28,7 @@ export async function GET({ fetch }) {
 						</item>
 					`
 					)
-					.join('')}
+					.join('').replace('&', 'amp')}
 			</channel>
 		</rss>
 	`.trim().replace('&', '&amp;')
