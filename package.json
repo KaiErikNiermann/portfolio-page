@@ -34,7 +34,6 @@
     "@vercel/postgres": "^0.3.0",
     "gh-pages": "^5.0.0",
     "inter-ui": "^3.19.3",
-    "katex": "^0.16.8",
     "knex": "^2.4.2",
     "lucide-svelte": "^0.263.0",
     "mdsvex-relative-images": "^1.0.3",

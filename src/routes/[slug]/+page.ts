@@ -1,6 +1,5 @@
 import { error } from '@sveltejs/kit'
 
-
 export async function load({ params: params }) {
 	try {
 		const post : {default: any, metadata: App.Post} = await import(`../../posts/${params.slug}.md`)

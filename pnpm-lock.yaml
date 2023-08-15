@@ -33,9 +33,6 @@ dependencies:
   inter-ui:
     specifier: ^3.19.3
     version: 3.19.3
-  katex:
-    specifier: ^0.16.8
-    version: 0.16.8
   knex:
     specifier: ^2.4.2
     version: 2.5.1(pg@8.11.1)
