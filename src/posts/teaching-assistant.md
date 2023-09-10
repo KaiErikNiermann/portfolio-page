@@ -1,7 +1,7 @@
 ---
 title: Teaching assistant
 description: Teaching assistant position for the courses Web Technology and Computer Programming Project.
-date: '2023-4-14'
+date: '2023-1-1'
 categories:
   - sveltekit
   - svelte
