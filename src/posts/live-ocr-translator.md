@@ -6,7 +6,7 @@ categories:
   - sveltekit
   - svelte
 published: true
-github: 'https://github.com/KaiErikNiermann/portfolio-page'
+github: 'https://github.com/KaiErikNiermann/live-ocr-translator'
 post_type: true
 ---
 
