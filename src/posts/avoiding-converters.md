@@ -94,5 +94,3 @@ To combine multiple pdfs into one
 ```bash
 pdfunite path/to/fileA.pdf path/to/fileB.pdf path/to/merged_output.pdf
 ```
-
-
