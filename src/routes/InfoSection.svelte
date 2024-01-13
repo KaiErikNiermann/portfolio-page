@@ -13,7 +13,7 @@
                 <a href="https://github.com/KaiErikNiermann"><h3>github</h3></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/kai-niermann-0794ab91/"
+                <a href="https://www.linkedin.com/in/kai-erik-niermann-0794ab91/"
                     ><h3>linkedin</h3></a
                 >
             </li>
