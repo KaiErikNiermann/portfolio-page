@@ -4,7 +4,7 @@ description: An exploration into making your nginx configuration more secure by 
 date: '2023-4-14'
 categories:
   - docker
-published: true
+published: false
 github: null
 post_type: 3
 ---

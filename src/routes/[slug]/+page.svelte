@@ -22,8 +22,8 @@
 
 <style>
 	article {
-		max-inline-size: var(--size-content-3);
 		margin-inline: auto;
+		max-width: 800px;
 	}
 
 	hgroup {
@@ -32,7 +32,7 @@
 
 	div.prose {
 		margin-inline: var(--size-3);
-		min-width: auto;
+		min-width: 50%;
 	}
 
 	h1 {

@@ -3,9 +3,9 @@
 @import "@fontsource/manrope";
 @import "@fontsource/jetbrains-mono";
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
-// @import url(./styles/prism-night-owl.css);
+@import url(./styles/prism-night-owl.css);
 // @import url(./styles/prism-atom-dark.css);
-@import url(./styles/prism-synthwave84.css);
+// @import url(./styles/prism-synthwave84.css);
 
 
 * {
@@ -21,9 +21,28 @@ a, a > * {
     transition: color 0.2s; 
 }
 
+blockquote {
+    border-left: 4px solid var(--surface-1-light);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background-color: var(--surface-2-dark);
+    color: var(--text-1);
+}
+
+a {
+    color: lightblue;
+}
+
 /* Hover styles */
 a:hover, a:hover > * {
     color: #0056b3; 
+}
+
+figure > img{
+  transition: .2s;
+}
+figure > img:hover{
+  transform: scale(1.5);
 }
 
 body {
