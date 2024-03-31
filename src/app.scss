@@ -29,6 +29,12 @@ blockquote {
     color: var(--text-1);
 }
 
+/* h1 larger than h2 */
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
 a {
     color: lightblue;
 }
@@ -166,7 +172,14 @@ ol.list-style {
     padding: 0 0 0 1rem; 
 }
 
-li.list-style {
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 1rem 0;
+}
+
+li {
+    min-height: 24px;
     padding-inline-start: 0;
 }
 
