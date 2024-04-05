@@ -16,7 +16,10 @@
                             {/if}
                             {post.title}
                         </a>
-                        <p class="date">{post.date}</p>
+                        <div class="post-metadata">
+                            <p class="date">{post.date}</p>
+                            <p class="categories">{post.categories.join(", ")}</p>
+                        </div>
                         <p class="description">{post.description}</p>
                     </li>
                 {/if}
@@ -33,6 +36,16 @@
         align-items: center;
         min-width: 700px;
     }
+
+    div.post-metadata {
+        display: flex;
+        justify-content: left;
+        margin-top: var(--size-2);
+        p {
+            margin-right: var(--size-2);
+        }
+    }
+
     h1 {
         font-weight: 700;
         font-size: 50px;

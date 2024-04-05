@@ -26,7 +26,21 @@ declare global {
 			'mongodb' |
 			'HTML' |
 			'CSS' |
-			'SCSS' 
+			'SCSS' | 
+			'JavaScript' |
+			'Node.js' |
+			'Express' |
+			'PostgreSQL' |
+			'Git' |
+			'GitHub' |
+			'Linux' |
+			'Windows' |
+			'Ubuntu' |
+			'Python' |
+			'C++' |
+			'Java' |
+			'Bash' |
+			''
 
 		type Post = { 
 			title: string; 

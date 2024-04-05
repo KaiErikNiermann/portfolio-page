@@ -4,6 +4,8 @@ description: Discord bot whos purpose is to use various methods of data collecti
 date: '2022-6-1'
 categories:
   - python
+  - matplotlib 
+  - pandas
 published: true
 github: https://github.com/KaiErikNiermann/DataAnalysis-discord-bot
 post_type: true
