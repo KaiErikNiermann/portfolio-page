@@ -4,7 +4,7 @@
             href="https://github.com/KaiErikNiermann"
             target="_blank">Kai Erik Niermann</a
         >
-         | 2023
+         | 2024
     </p>
 </footer>
 
