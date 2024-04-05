@@ -40,7 +40,6 @@
     div.post-metadata {
         display: flex;
         justify-content: left;
-        margin-top: var(--size-2);
         p {
             margin-right: var(--size-2);
         }
@@ -80,6 +79,6 @@
     }
 
     .description {
-        margin-top: var(--size-3);
+        margin-top: var(--size-1);
     }
 </style>
