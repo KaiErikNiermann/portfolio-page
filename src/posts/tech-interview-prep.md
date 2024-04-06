@@ -7,7 +7,7 @@ categories:
   - Pytest
   - Sphinx 
 published: true
-github: https://github.com/KaiErikNiermann/PBRT.jl
+github: https://github.com/KaiErikNiermann/tech-interview-prep
 post_type: true
 ---
 
