@@ -1,6 +1,6 @@
 ---
-title: Simplifying unittests for classes with same in/out functions
-description: I ran into a mildly interesting problem of wanting to run the same unit tests on multiple functions of a class without having to call each function individually, this is just a short writeup of how I solved this issue
+title: Simplifying python unittests using `inspect`
+description: I ran into a mildly interesting problem of wanting to run the same unit tests on multiple functions of a class without having to call each function individually, this is a short writeup of how I solved this problem and in the process found a nice way to only have to write a minimal number of tests
 date: '2024-04-014'
 categories:
   - Python
@@ -21,7 +21,7 @@ class Testing:
         return nums[:-1][0]
 ```
 ## Bad 
-For both of these classes you expect the same outputs for a given input. Now the straightforward way of writing tests for this would be.
+For both of these classes, you expect the same outputs for a given input. Now the straightforward way of writing tests for this would be.
 ```python 
 from src import main
 
@@ -41,11 +41,11 @@ if __name__ == "__main__":
 ```
 Which using pytest you can run with `pytest tests/tests.py`. But I kinda felt like this was quite annoying, for two main reasons 
 - You are just plainly writing repeated code 
-- Its annoying to maintain, especially as we scale up to more of the same function 
+- It's annoying to maintain, especially as we scale up to more of the same function 
 
 ## Better
 
-So remembering that you can dynamically access class methods in python I started off with a simple approach using the `inspect.getmembers` function 
+So remembering that you can dynamically access class methods in Python I started off with a simple approach using the `inspect.getmembers` function 
 ```python
 def test_give_first(self): 
     methods = []
@@ -59,25 +59,25 @@ def test_give_first(self):
         self.assertEqual(method(main.Testing(), [7, 8, 9]), 7)
 ```
 
-Which cleaned up things a bit, but then I realized if you have multiple classes which share this pattern it would make sense to have a separate method to give you the list of methods you could easily call for different test cases. So to our `TestSolution` class we can add the following
+This cleaned up things a bit, but then I realized if you have multiple classes that share this pattern it would make sense to have a separate method to give you the list of methods you could easily call for different test cases. So to our `TestSolution` class, we can add the following
 ```python
-def method_gettr() -> Generator[callable, None, None]: 
+def method_gettr(problem) -> Generator[callable, None, None]: 
     for _, method in inspect.getmembers(
-        main.Testing, predicate=inspect.isfunction
+        problem, predicate=inspect.isfunction
     ): yield method
 ```
 
 This simplifies our testing function down even further to the following 
 ```python
 def test_give_first(self): 
-    for method in TestSolution.method_gettr(): 
+    for method in TestSolution.method_gettr(main.Testing): 
         self.assertEqual(method(main.Testing(), [1, 2, 3]), 1)
         self.assertEqual(method(main.Testing(), [4, 5, 6]), 4)
         self.assertEqual(method(main.Testing(), [7, 8, 9]), 7)
 ```
 
 ## Even Better
-For most cases I think its reasonable to stop at this point, but curiousity tends to get the better of me so I wanted to see if I could avoid having to write all those pesky `self.assertEqual` repeatedly. One thing we could do is create some structure to hold the inputs and outputs them loop through those. Which gives us 
+For most cases, I think it's reasonable to stop at this point, but curiosity tends to get the better of me so I wanted to see if I could avoid having to write all those pesky `self.assertEqual` repeatedly. One thing we could do is create some structure to hold the inputs and outputs them loop through those. Which gives us 
 ```python 
 def test_give_first(self):
     inout = [
@@ -86,7 +86,7 @@ def test_give_first(self):
         ([7, 8, 9], 7)
     ]
     for data, expected in inout: 
-        for method in TestSolution.method_gettr(): 
+        for method in TestSolution.method_gettr(main.Testing): 
             self.assertEqual(method(main.Testing(), data), expected)
 ```
 
@@ -100,35 +100,57 @@ import inspect
 from typing import Generator
 
 class TestSolution(unittest.TestCase): 
-    def method_gettr() -> Generator[callable, None, None]: 
+    # gives back all user 
+    def method_gettr(problem) -> Generator[callable, None, None]: 
         for _, method in inspect.getmembers(
-            main.Testing, predicate=inspect.isfunction
+            problem, predicate=inspect.isfunction
         ): yield method
         
     def data_func(self, inout, problem): 
         for data, expected in inout:
-            for method in TestSolution.method_gettr(): 
-                self.assertEqual(method(problem.Testing(), data), expected)
+            for method in TestSolution.method_gettr(problem): 
+                self.assertEqual(method(problem(), data), expected)
         
     def test_give_first_general(self):
         self.test_data_func([
             ([1, 2, 3], 1),
             ([4, 5, 6], 4),
             ([7, 8, 9], 7)
-        ], main)
+        ], main.Testing)
 ```
 
 ### Note 
 
-If you had some functions you wanted to run the same tests on and others you wanted to run different tests all you have to do is modify the predicate of the `method_gettr`, `inspect.isfunction` gives you all *user-defined* functions, to get only a subset of these you can use various predicates.
+If you had some functions you wanted to run the same tests on and others you wanted to run different tests all you have to do is modify the predicate of the `method_gettr`, `inspect.isfunction` gives you all *user-defined* functions, to get only a subset of these you can use various predicates. We can pass our filter to `method_gettr()` like so 
+
+```python 
+def method_gettr(f_filter, problem) -> Generator[callable, None, None]: 
+    for _, method in inspect.getmembers(
+        problem, 
+        predicate=lambda func: inspect.isfunction(func) and f_filter(func)
+    ): yield method
+
+def data_func(self, inout, problem, f_filter): 
+    for data, expected in inout:
+        for method in TestSolution.method_gettr(f_filter): 
+            self.assertEqual(method(problem(), data), expected)
+```
+
+I added the following function to `main.Testing` just to demonstrate 
+```python 
+def give_last(self, nums: list[int], num: int) -> int: 
+    return nums[-1]
+```
 
 #### Filter by name name 
 
 ```python
-lambda x: inspect.isfunction(x) and x.__name__.startswith("give_first")
+lambda func: func.__name__.startswith("give_first")
 ```
 
 #### Filter by signature
+
+Of note here is that as you might have already noticed you can figure by practically any aspect of the signature.
 
 ```python
 def test_give_first_general(self):
@@ -150,7 +172,7 @@ def test_give_first_general(self):
         ([1, 2, 3], 1),
         ([4, 5, 6], 4),
         ([7, 8, 9], 7)
-    ], main, lambda x: inspect.isfunction(x) and inspect.signature(x) == t_signature)
+    ], main.Testing, lambda func: inspect.signature(func) == t_signature)
 ```
 
 If you are curious `t_signature` is an object of `inspect.Signature` and in this case it looks as follows
