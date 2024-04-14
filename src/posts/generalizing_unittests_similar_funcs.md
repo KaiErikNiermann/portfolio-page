@@ -76,7 +76,7 @@ def test_give_first(self):
         self.assertEqual(method(main.Testing(), [7, 8, 9]), 7)
 ```
 
-## Best
+## Even Better
 For most cases I think its reasonable to stop at this point, but curiousity tends to get the better of me so I wanted to see if I could avoid having to write all those pesky `self.assertEqual` repeatedly. One thing we could do is create some structure to hold the inputs and outputs them loop through those. Which gives us 
 ```python 
 def test_give_first(self):
@@ -90,19 +90,72 @@ def test_give_first(self):
             self.assertEqual(method(main.Testing(), data), expected)
 ```
 
-## Too far
-If this is better I'd argue could be subjective, but I still had the bad thought of *can we go further*. Specifically those nested loops were bugging me. One way to avoid them is to create an array for all the outputs and likewise an array for all the expected outputs for all test cases. Which led me to this final state of our testing function.
+## Fully generalized
+Since we basically generalized the testing code as just a function of some inputs and outputs we can encapsulate this in another helper like so.
+```python 
+from src import main
+
+import unittest
+import inspect
+from typing import Generator
+
+class TestSolution(unittest.TestCase): 
+    def method_gettr() -> Generator[callable, None, None]: 
+        for _, method in inspect.getmembers(
+            main.Testing, predicate=inspect.isfunction
+        ): yield method
+        
+    def data_func(self, inout, problem): 
+        for data, expected in inout:
+            for method in TestSolution.method_gettr(): 
+                self.assertEqual(method(problem.Testing(), data), expected)
+        
+    def test_give_first_general(self):
+        self.test_data_func([
+            ([1, 2, 3], 1),
+            ([4, 5, 6], 4),
+            ([7, 8, 9], 7)
+        ], main)
+```
+
+### Note 
+
+If you had some functions you wanted to run the same tests on and others you wanted to run different tests all you have to do is modify the predicate of the `method_gettr`, `inspect.isfunction` gives you all *user-defined* functions, to get only a subset of these you can use various predicates.
+
+#### Filter by name name 
+
 ```python
-def test_give_first_too_far(self):
-    inout = [
+lambda x: inspect.isfunction(x) and x.__name__.startswith("give_first")
+```
+
+#### Filter by signature
+
+```python
+def test_give_first_general(self):
+    # defining our signature
+    t_signature = inspect.Signature(
+        parameters=[
+            inspect.Parameter(
+                name="self", kind=inspect.Parameter.POSITIONAL_OR_KEYWORD
+            ),
+            inspect.Parameter(
+                name="nums", kind=inspect.Parameter.POSITIONAL_OR_KEYWORD, 
+                annotation=list[int]
+            )
+        ], return_annotation=int
+    )
+        
+    # using the signature in the lambda 
+    self.data_func([
         ([1, 2, 3], 1),
         ([4, 5, 6], 4),
         ([7, 8, 9], 7)
-    ]
-    methods = [method for method in TestSolution.method_gettr()]
-    for data, expected in inout: 
-        results = map(lambda method: method(main.Testing(), data), methods)
-        self.assertEqual(list(results), [expected] * len(methods))
+    ], main, lambda x: inspect.isfunction(x) and inspect.signature(x) == t_signature)
+```
+
+If you are curious `t_signature` is an object of `inspect.Signature` and in this case it looks as follows
+```
+...(self, nums: list[int]) -> int
 ```
 
 # Full code 
