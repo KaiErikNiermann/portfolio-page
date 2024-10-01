@@ -3,10 +3,11 @@ title: Fullstack Intern @ Singify (Philips Hue)
 description: Fullstack Engineering Intern working on internal tools 
 date: '2024-7-1'
 categories:
-  - Vue/Pinia/Vite
-  - AWS/WebSockets
-  - Docker/Docker Compose/Terraform
-  - Python (FastAPI)
+  - Vue
+  - AWS
+  - Docker/Terraform
+  - Python
+  - TS
 published: true
 github: null
 post_type: false
