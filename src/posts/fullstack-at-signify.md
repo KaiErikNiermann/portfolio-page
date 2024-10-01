@@ -1,5 +1,5 @@
 ---
-title: Fullstack Engineering Intern @ Singify (Philips Hue Team)
+title: Fullstack Intern @ Singify (Philips Hue)
 description: Fullstack Engineering Intern working on internal tools 
 date: '2024-7-1'
 categories:
